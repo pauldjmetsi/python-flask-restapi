@@ -29,10 +29,6 @@ docker build -t <image-name>:<version>-arm64 .
 Build for ARM64:
 docker build --platform=linux/arm64 -t <image-name>:<version>-arm64 .
 
-Build for AMD64: 
-docker build --platform=linux/amd64 -t <image-name>:<version>-amd64 .
-
-
 Examples: 
 docker build -t demo/flask-api:0.0 .
 docker build -t flask-api-subnet2cidr .
