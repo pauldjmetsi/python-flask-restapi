@@ -3,6 +3,10 @@ Example Project on how to develop RESTful API with Flask and Python
 
 Converts subnet to cidr using API POST. 
 
+Path: 
+
+/api/convert-subnet
+
 JSON body example: 
 
 ```
@@ -35,7 +39,10 @@ docker build -t flask-api-subnet2cidr .
 docker build --platform=linux/amd64 -t flask-api-subnet2cidr:v1-amd64 .
 
 Tag Image: 
-docker tag flask-api-subnet2cidr:v1-amd64 pauldj/flask-api-subnet2cidr:v1-amd64
+docker tag pauldj/flask-api-subnet2cidr:v1-amd64 pauldj/flask-api-subnet2cidr:v1-amd64
 
 Push Image: 
 docker push pauldj/flask-api-subnet2cidr:v1-amd64
+
+Run Docker Image: 
+docker run -d -p 5001:5000 --name flask-cidr-to-subnet pauldj/flask-cidr-to-subnet:v1-arm64

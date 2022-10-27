@@ -17,7 +17,7 @@ def tasks():
     return appService.get_tasks()
 
 ## Custom POST to convert subnet to cidr ##
-@app.route('/api/convert', methods=['POST'])
+@app.route('/api/convert-subnet', methods=['POST'])
 def create_task():
     # check body is a valid json
     try: 
